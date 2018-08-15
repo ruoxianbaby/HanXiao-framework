@@ -1,7 +1,3 @@
 <?php
-namespace hanxiao;
 
-class Autoload
-{
-    
-}
+spl_autoload_register();
