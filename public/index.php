@@ -3,10 +3,12 @@
  *  项目入口文件
  */
 
-define('DEBUG', 1);
-define('APP_PATH', __DIR__);
+define('DEBUG', true);
+define('APP_PATH', dirname(__DIR__));
 
-require APP_PATH . '/hanxiao/hanxiao.php';
+require APP_PATH . '/hanxiao/autoload.php';
+require APP_PATH . '/hanxiao/Hanxiao.php';
+$config = require APP_PATH . '/application/config.php';
 
-$hanxiao = new Hanxiao();
+$hanxiao = new hanxiao\Hanxiao($config);
 $hanxiao->run();

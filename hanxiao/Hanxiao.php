@@ -1,7 +1,4 @@
 <?php
-namespace hanxiao;
-
-use hanxiao\Autoload;
 
 class Hanxiao
 {
