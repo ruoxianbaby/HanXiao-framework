@@ -1,7 +1,8 @@
 <?php
 namespace hanxiao;
 
-class Database 
+use hanxiao\Base;
+class Database extends Base
 {
     public function connect($config)
     {
