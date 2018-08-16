@@ -1,9 +1,11 @@
 <?php
 namespace hanxiao;
 
-class Hanxiao
+use hanxiao\Base;
+
+class Hanxiao extends Base
 {
-    public function __construct($config)
+    public function __construct($config  = null)
     {
         $this->verify($config);
         $this->load($config);
@@ -21,7 +23,7 @@ class Hanxiao
 
     private function load($config)
     {
-        
+
     }
 
 }
