@@ -5,7 +5,7 @@ use hanxiao\Base;
 
 class Hanxiao extends Base
 {
-    public $config = [];
+    public static $config = [];
     public function __construct($config  = null)
     {
         $this->verify($config);
@@ -24,16 +24,16 @@ class Hanxiao extends Base
 
     private function load($config)
     {
-        $this->config = $config;
+        self::$config = $config;
     }
 
-    public function getConfig($name = null)
+    public static function getConfig($name = null)
     {
         if ($name == null) {
-            return $this->config;
+            return self::$config;
         } else {
-            if (isset($this->config[$name])) {
-                return $this->config[$name];
+            if (isset(self::$config[$name])) {
+                return self::$config[$name];
             } else {
                 throw new \Exception($name . 'can not found in config');
             }   
